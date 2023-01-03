@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "890846095476",
+    "project_id": "sib-brew-crew",
+    "storage_bucket": "sib-brew-crew.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:890846095476:android:aaee88205c8c469cf8c921",
+        "android_client_info": {
+          "package_name": "com.sib.brew_crew"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "890846095476-aoabn9km6lbv3jg2nh04010naejq05iq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sib.brew_crew",
+            "certificate_hash": "f0cb3890d1c8c7af6da8f371c882e42641de658c"
+          }
+        },
+        {
+          "client_id": "890846095476-kkl9cu91uv74946qnh7o1l85trvtfamq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDH5gbgspA597aVL-cWHARkXX5OBQihszg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "890846095476-kkl9cu91uv74946qnh7o1l85trvtfamq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
