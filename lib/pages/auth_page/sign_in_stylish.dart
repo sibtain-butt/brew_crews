@@ -1,6 +1,5 @@
 import 'package:brew_crew/my_theme/custom_theme.dart';
 import 'package:brew_crew/services/auth_stylish.dart';
-import 'package:brew_crew/shared/constants.dart';
 import 'package:brew_crew/shared/loading.dart';
 import 'package:brew_crew/shared/wave_loading_shared.dart';
 import 'package:flutter/material.dart';
@@ -43,6 +42,9 @@ class _Login extends State<Login> {
           }
           return 'Enter a Valid Email Address';
         }
+        //below return null was not added i add this because of Dart Analysis
+        // suggest me add return null;
+        return null; // <== this one
       },
 
       ///Below single line details is in shared/constant.dart file
@@ -132,7 +134,7 @@ class _Login extends State<Login> {
           size: 30.0,
         ),
         suffixIcon: IconButton(
-          icon: Icon(_obscureText ? Icons.visibility : Icons.visibility_off),
+          icon: Icon(_obscureText ? Icons.visibility_off : Icons.visibility),
           color: CustomTheme.of(context).primaryColor,
           onPressed: () {
             setState(() {
@@ -146,7 +148,7 @@ class _Login extends State<Login> {
       ),
     );
 
-    final txtbutton = TextButton(
+    final txtButton = TextButton(
       onPressed: () {
         widget.toggleView!();
       },
@@ -159,7 +161,7 @@ class _Login extends State<Login> {
       ),
     );
 
-    final loginAnonymousButon = Material(
+    final loginAnonymousButton = Material(
       elevation: 5.0,
       borderRadius: BorderRadius.circular(30.0),
       color: CustomTheme.of(context).primaryColor,
@@ -175,7 +177,7 @@ class _Login extends State<Login> {
           dynamic result = await _auth.signInAnonymous();
 
           if (result.uid == null) {
-            //null means unsuccessfull authentication
+            //null means unsuccessful authentication
             showDialog(
                 context: context,
                 builder: (context) {
@@ -217,7 +219,7 @@ class _Login extends State<Login> {
             dynamic result = await _auth.signInEmailPassword(
                 LoginUser(email: _email.text, password: _password.text));
             if (result.uid == null) {
-              //null means unsuccessfull authentication
+              //null means unsuccessful authentication
               showDialog(
                   context: context,
                   builder: (context) {
@@ -280,12 +282,12 @@ class _Login extends State<Login> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        loginAnonymousButon,
+                        loginAnonymousButton,
                         const SizedBox(height: 45.0),
                         emailField,
                         const SizedBox(height: 25.0),
                         passwordField,
-                        txtbutton,
+                        txtButton,
                         const SizedBox(height: 35.0),
                         loginEmailPasswordButton,
                         const SizedBox(height: 15.0),

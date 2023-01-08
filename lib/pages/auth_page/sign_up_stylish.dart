@@ -128,7 +128,7 @@ class _Register extends State<Register> {
           size: 30.0,
         ),
         suffixIcon: IconButton(
-          icon: Icon(_obscureText ? Icons.visibility : Icons.visibility_off),
+          icon: Icon(_obscureText ? Icons.visibility_off : Icons.visibility),
           color: CustomTheme.of(context).primaryColor,
           onPressed: () {
             setState(() {
